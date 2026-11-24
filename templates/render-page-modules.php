@@ -8,17 +8,26 @@ if (!function_exists('have_rows') || !have_rows('page_modules')) {
   return;
 }
 
+$rendered_modules = [];
+
 while (have_rows('page_modules')) : the_row();
+  $layout = get_row_layout();
+  ob_start();
 
   // Section-Optionen 
   $opts = [
-    'name'       => get_row_layout(),
+    'name'       => $layout,
     'container'  => get_sub_field('container') ?: 'container-lg',
     'padding_y'  => get_sub_field('padding_y') ?: 'py-5',
     'bg'         => get_sub_field('background') ?: 'none',
     'id'         => get_sub_field('id-anchor') ?: '',
     'show_on'    => get_sub_field('show-on') ?: 'everywhere',
   ];
+
+  if ($layout === 'hero') {
+    $opts['container'] = 'none';
+    $opts['padding_y'] = '0';
+  }
 
   // Öffne Section-Hülle nur, wenn Helper existieren – sonst simple Wrapper
   if (function_exists('section_open')) {
@@ -32,9 +41,15 @@ while (have_rows('page_modules')) : the_row();
     if ($cont !== 'none') echo '<div class="'.$cont.'">';
   }
 
-  switch (get_row_layout()) {
+  switch ($layout) {
+    case 'hero':
+      get_template_part('template-parts/flex/layout', 'hero'); break;
+
     case 'intro':
       get_template_part('template-parts/flex/layout', 'intro'); break;
+
+    case 'main_content':
+      get_template_part('template-parts/flex/layout', 'main-content'); break;
 
     case 'text_1col':
       get_template_part('template-parts/flex/layout', 'text-1col'); break;
@@ -77,6 +92,9 @@ while (have_rows('page_modules')) : the_row();
 
     case 'google_map':
       get_template_part('template-parts/flex/layout', 'google-map'); break;
+
+     case 'project_highlight':
+      get_template_part('template-parts/flex/layout', 'project-highlight'); break;
   }
 
   if (function_exists('section_close')) {
@@ -86,4 +104,41 @@ while (have_rows('page_modules')) : the_row();
     echo '</section>';
   }
 
+  $rendered_modules[] = [
+    'layout' => $layout,
+    'output' => ob_get_clean(),
+  ];
+
 endwhile;
+
+$hero_index = null;
+$intro_index = null;
+$main_content_index = null;
+foreach ($rendered_modules as $index => $module) {
+  if ($module['layout'] === 'hero' && $hero_index === null) {
+    $hero_index = $index;
+  }
+  if ($module['layout'] === 'intro' && $intro_index === null) {
+    $intro_index = $index;
+  }
+  if ($module['layout'] === 'main_content' && $main_content_index === null) {
+    $main_content_index = $index;
+  }
+}
+
+$anchor_index = $intro_index;
+$anchor_layout = 'intro';
+if ($hero_index !== null && ($anchor_index === null || $hero_index > $anchor_index)) {
+  $anchor_index = $hero_index;
+  $anchor_layout = 'hero';
+}
+
+if ($anchor_index !== null && $main_content_index !== null && $main_content_index < $anchor_index) {
+  $main_content = array_splice($rendered_modules, $main_content_index, 1);
+  $anchor_index = array_search($anchor_layout, array_column($rendered_modules, 'layout'), true);
+  array_splice($rendered_modules, $anchor_index + 1, 0, $main_content);
+}
+
+foreach ($rendered_modules as $module) {
+  echo $module['output'];
+}

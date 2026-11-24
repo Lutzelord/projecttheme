@@ -3,6 +3,155 @@
  */
 .intro-image {
   display: block;
+  width: min(100%, 457px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.intro-content {
+  max-width: 725px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 92px;
+  padding: 1rem 1.5rem 1rem 2rem;
+  border-radius: 999px;
+  background-color: var(--theme-color-light);
+  color: var(--theme-color-primary);
+  font-family: var(--theme-font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.intro-cta > span:first-child {
+  flex: 1;
+}
+
+.intro-cta-icon {
+  display: grid;
+  flex: 0 0 3.5rem;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 1rem;
+  border: 0.2rem solid currentColor;
+  border-radius: 50%;
+  font-family: var(--theme-font-body);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.intro-text {
+  margin: 2rem auto 0;
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.intro-image-column {
+  text-align: center;
+}
+
+/*** Main Content ***/
+
+.section.main_content {
+  background-color: var(--theme-color-tertiary);
+  color: var(--theme-color-accent);
+}
+
+.main-content__inner {
+  max-width: 760px;
+}
+
+.main-content__group + .main-content__group {
+  margin-top: 3.5rem;
+}
+
+.main-content__heading {
+  margin: 0 0 1.25rem;
+  color: inherit;
+  font-family: var(--theme-font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.main-content__links {
+  display: grid;
+  gap: 1rem;
+}
+
+.main-content__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: inherit;
+  text-decoration: none;
+  transition: var(--theme-transition);
+}
+
+a.main-content__link:hover,
+a.main-content__link:focus-visible {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: inherit;
+}
+
+.main-content__link-copy {
+  display: grid;
+  min-width: 0;
+}
+
+.main-content__link-title {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.main-content__link-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.main-content__link-arrow {
+  display: grid;
+  flex: 0 0 2.625rem;
+  place-items: center;
+  width: 2.625rem;
+  height: 2.625rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/*** Hero ***/
+
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1440 / 506;
+  overflow: hidden;
+  background-color: var(--theme-color-secondary);
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /*** Button ***/
