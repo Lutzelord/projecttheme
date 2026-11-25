@@ -127,6 +127,27 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_6b06e2f12e72d",
+                            "label": "Abgrenzung",
+                            "name": "abgrenzung",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_6b05838c18704",
                             "label": "Local Flea Market_Text",
                             "name": "local_flea_market_text",
@@ -148,11 +169,11 @@
                             "append": ""
                         },
                         {
-                            "key": "field_6b0610008b101",
-                            "label": "Local market links",
-                            "name": "local_market_items",
+                            "key": "field_6b05843c18705",
+                            "label": "Flea market Puntigam",
+                            "name": "flea_market_puntigam_",
                             "aria-label": "",
-                            "type": "repeater",
+                            "type": "acfe_button",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -161,76 +182,60 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "row",
-                            "min": 0,
-                            "max": 0,
-                            "rows_per_page": 20,
-                            "button_label": "Add Market",
-                            "collapsed": "",
-                            "acfe_repeater_stylised_button": 0,
-                            "sub_fields": [
-                                {
-                                    "key": "field_6b0610018b102",
-                                    "label": "Market name",
-                                    "name": "title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_6b0610008b101"
-                                },
-                                {
-                                    "key": "field_6b0610028b103",
-                                    "label": "Description",
-                                    "name": "description",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_6b0610008b101"
-                                },
-                                {
-                                    "key": "field_6b0610038b104",
-                                    "label": "Link",
-                                    "name": "link",
-                                    "aria-label": "",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "parent_repeater": "field_6b0610008b101"
-                                }
-                            ]
+                            "button_value": "Submit",
+                            "button_type": "button",
+                            "button_class": "acf-button button button-secondary",
+                            "button_id": "",
+                            "button_before": "",
+                            "button_after": "",
+                            "button_ajax": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6b05845f18706",
+                            "label": "Flea market Shopping Center West",
+                            "name": "flea_market_shopping_center_west_",
+                            "aria-label": "",
+                            "type": "acfe_button",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_value": "Submit",
+                            "button_type": "button",
+                            "button_class": "acf-button button button-secondary",
+                            "button_id": "",
+                            "button_before": "",
+                            "button_after": "",
+                            "button_ajax": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6b05847118707",
+                            "label": "Flea market Interspar - Wienerstraße",
+                            "name": "flea_market_interspar_-_wienerstrase_",
+                            "aria-label": "",
+                            "type": "acfe_button",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_value": "Submit",
+                            "button_type": "button",
+                            "button_class": "acf-button button button-secondary",
+                            "button_id": "",
+                            "button_before": "",
+                            "button_after": "",
+                            "button_ajax": 0,
+                            "allow_in_bindings": 0
                         },
                         {
                             "key": "field_6b05848218708",
@@ -254,11 +259,11 @@
                             "append": ""
                         },
                         {
-                            "key": "field_6b0610108b201",
-                            "label": "Special market links",
-                            "name": "special_market_items",
+                            "key": "field_6b05848e18709",
+                            "label": "Flohmarkt-Flair at Lendwirbel",
+                            "name": "flohmarkt-flair_at__lendwirbel",
                             "aria-label": "",
-                            "type": "repeater",
+                            "type": "acfe_button",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -267,76 +272,60 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "row",
-                            "min": 0,
-                            "max": 0,
-                            "rows_per_page": 20,
-                            "button_label": "Add Market",
-                            "collapsed": "",
-                            "acfe_repeater_stylised_button": 0,
-                            "sub_fields": [
-                                {
-                                    "key": "field_6b0610118b202",
-                                    "label": "Market name",
-                                    "name": "title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_6b0610108b201"
-                                },
-                                {
-                                    "key": "field_6b0610128b203",
-                                    "label": "Description",
-                                    "name": "description",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_6b0610108b201"
-                                },
-                                {
-                                    "key": "field_6b0610138b204",
-                                    "label": "Link",
-                                    "name": "link",
-                                    "aria-label": "",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "parent_repeater": "field_6b0610108b201"
-                                }
-                            ]
+                            "button_value": "Submit",
+                            "button_type": "button",
+                            "button_class": "acf-button button button-secondary",
+                            "button_id": "",
+                            "button_before": "",
+                            "button_after": "",
+                            "button_ajax": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6b0584b01870a",
+                            "label": "Kinderflohmarkt",
+                            "name": "kinderflohmarkt",
+                            "aria-label": "",
+                            "type": "acfe_button",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_value": "Submit",
+                            "button_type": "button",
+                            "button_class": "acf-button button button-secondary",
+                            "button_id": "",
+                            "button_before": "",
+                            "button_after": "",
+                            "button_ajax": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6b0584b51870b",
+                            "label": "Mega flea market",
+                            "name": "mega_flea_market",
+                            "aria-label": "",
+                            "type": "acfe_button",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_value": "Submit",
+                            "button_type": "button",
+                            "button_class": "acf-button button button-secondary",
+                            "button_id": "",
+                            "button_before": "",
+                            "button_after": "",
+                            "button_ajax": 0,
+                            "allow_in_bindings": 0
                         }
                     ],
                     "min": "",
@@ -1779,5 +1768,5 @@
             "json"
         ]
     },
-    "modified": 1795524668
+    "modified": 1795613447
 }

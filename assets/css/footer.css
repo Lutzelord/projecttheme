@@ -2,7 +2,7 @@
  * Footer
  */
 footer {
-  background-color: var(--theme-color-secondary);
+  background-color: var(--theme-color-accessibility);
   display: flex;
   color: #7096D1;
 }

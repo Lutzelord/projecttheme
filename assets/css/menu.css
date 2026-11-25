@@ -17,7 +17,30 @@
   gap: 20px;
 }
 
+#site-navigation .main-menu li a,
+#masthead .site-branding > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 167px;
+  min-height: 53px;
+  padding: 0 1rem;
+  border: 1px solid var(--theme-color-light);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--theme-color-accent);
+  transition: var(--theme-transition);
+}
+
 #site-navigation .main-menu li a:hover,
+#site-navigation .main-menu li a:focus-visible,
+#masthead .site-branding > a:hover,
+#masthead .site-branding > a:focus-visible {
+  background-color: var(--theme-color-light);
+  color: var(--theme-color-primary);
+}
+
 #menu-footer li a:hover {
   color: var(--theme-color-primary);
   transition: color 0.3s ease-in-out;

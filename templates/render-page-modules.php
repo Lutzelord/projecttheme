@@ -48,8 +48,14 @@ while (have_rows('page_modules')) : the_row();
     case 'intro':
       get_template_part('template-parts/flex/layout', 'intro'); break;
 
+    case 'cta_button':
+      get_template_part('template-parts/flex/layout', 'cta-button'); break;
+
     case 'main_content':
       get_template_part('template-parts/flex/layout', 'main-content'); break;
+
+    case 'market_button':
+      get_template_part('template-parts/flex/layout', 'market-button'); break;
 
     case 'text_1col':
       get_template_part('template-parts/flex/layout', 'text-1col'); break;
