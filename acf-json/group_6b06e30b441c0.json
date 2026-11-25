@@ -127,27 +127,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_6b06e2f12e72d",
-                            "label": "Abgrenzung",
-                            "name": "abgrenzung",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
                             "key": "field_6b05838c18704",
                             "label": "Local Flea Market_Text",
                             "name": "local_flea_market_text",
